@@ -40,10 +40,12 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
         android:text="Learn makhārij al-ḥurūf"
         app:iconTint="#A61717"
-        app:rippleColor="#B62222"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="130dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B62222" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

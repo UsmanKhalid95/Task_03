@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button repo;
+    Button learn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +29,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
+        learn=findViewById(R.id.button2);
+        learn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Uri uri = Uri.parse("https://drive.google.com/file/d/1SYtSfO2ftkPzq3UDgmPb5QGaOxEUtayi/view?usp=sharing");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -47,6 +47,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 }
