@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button repo;
     Button learn;
+    Intent intent;
+    Button quiz;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
             {
                 Uri uri = Uri.parse("https://drive.google.com/file/d/1SYtSfO2ftkPzq3UDgmPb5QGaOxEUtayi/view?usp=sharing");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        quiz=findViewById(R.id.button3);
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                intent = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
