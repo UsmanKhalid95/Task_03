@@ -16,6 +16,7 @@ public class MainActivity2 extends AppCompatActivity {
     Random rNum=new Random();
     TextView text;
     Button throat;
+    Button tounge;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,26 @@ public class MainActivity2 extends AppCompatActivity {
             {
                 Intent intent;
                 if(ArabicLetters[index].equals("ا") || ArabicLetters[index].equals("ه") || ArabicLetters[index].equals("ع") || ArabicLetters[index].equals("ح" )|| ArabicLetters[index].equals("غ") || ArabicLetters[index].equals("خ") )
+                {
+                    intent = new Intent(MainActivity2.this, MainActivity3.class);
+                    intent.putExtra("keyname",ArabicLetters[index]);
+                    startActivity(intent);
+                }
+                else{
+                    intent = new Intent(MainActivity2.this, MainActivity2.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+        tounge=findViewById(R.id.button5);
+        tounge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent;
+                if(ArabicLetters[index].equals("ض") || ArabicLetters[index].equals("ل") || ArabicLetters[index].equals("ن") || ArabicLetters[index].equals("ر") || ArabicLetters[index].equals("ت") || ArabicLetters[index].equals("د") || ArabicLetters[index].equals("ط") || ArabicLetters[index].equals("ظ") || ArabicLetters[index].equals("ذ") || ArabicLetters[index].equals("ث") || ArabicLetters[index].equals("ص") || ArabicLetters[index].equals("ز") || ArabicLetters[index].equals("س") )
                 {
                     intent = new Intent(MainActivity2.this, MainActivity3.class);
                     intent.putExtra("keyname",ArabicLetters[index]);
